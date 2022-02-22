@@ -1,0 +1,258 @@
+/* Corpo */
+
+html,
+body,
+figure,
+img,
+div,
+input,
+textarea,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+a,
+main {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+.column {
+  flex-basis: 49%;
+}
+
+:root {
+  --gray-light: #d4e9ff;
+  --blue: #1d2025;
+  --white: #fff;
+  --gray: #636363;
+  --black: #1d2025;
+  --dark-mode: #0e0e0e;
+  --row-light: rgb(255 255 255 / 20%);
+  --font-family: "Open Sans", sans-serif;
+}
+
+.hidden {
+  display: none;
+}
+
+body {
+  font-family: var(--font-family);
+}
+
+/* Header */
+
+header {
+  background-color: var(--blue);
+  padding: 30px 30px 0;
+}
+
+header .container {
+  background-color: var(--white);
+}
+
+header .row {
+  align-items: center;
+}
+
+header .column-left {
+  flex-basis: 30%;
+}
+
+header .column-right {
+  flex-basis: 60%;
+  text-align: center;
+}
+
+header .column img {
+  max-width: 100%;
+}
+
+header .column h1 {
+  font-size: 1.5rem;
+  color: var(--black);
+}
+
+header .column p {
+  font-size: 1rem;
+  color: var(--gray);
+}
+
+header .column ul {
+  margin-top: 16px;
+}
+
+header .column ul li {
+  margin-bottom: 12px;
+}
+
+header .column ul li a {
+  font-size: 1rem;
+  color: var(--black);
+}
+
+/* Rodapé */
+
+footer {
+  background-color: var(--blue);
+}
+
+footer .container {
+  padding: 20px;
+}
+
+footer nav ul li a {
+  color: var(--white);
+}
+
+footer nav .info-contact li {
+  margin-bottom: 15px;
+}
+
+footer nav .social-network {
+  border-top: 1px solid var(--row-light);
+  margin-top: 20px;
+  margin-bottom: 50px;
+  padding-top: 50px;
+  text-align: center;
+}
+
+footer nav .social-network li {
+  margin: 15px 28px;
+  text-align: center;
+  display: inline-block;
+}
+
+footer nav .social-network li a img {
+  width: 40px;
+  transition: 0.2s;
+}
+
+footer nav .social-network li a:hover img {
+  transform: scale(1.2) translateY(-10px);
+}
+
+/* Página principal */
+
+main .column {
+  padding: 20px;
+}
+
+main .column section {
+  border-bottom: 1px solid var(--gray-light);
+  margin: 0 0 20px;
+  min-height: 187px;
+  color: var(--black);
+}
+
+main .column section h2 {
+  font-size: 1.3rem;
+  margin: 0 0 15px;
+}
+
+main .column section p {
+  font-size: 0.9rem;
+  color: var(--gray);
+  line-height: 1.5;
+}
+
+main .column section ul li {
+  margin: 0 0 12px;
+}
+main .column section ul li h3 {
+  font-size: 1.1rem;
+}
+main .column section ul li strong {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin: 5px 0 10px;
+  display: inline-block;
+}
+
+/* Responsividade */
+
+@media only screen and (min-width: 768px) {
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  footer nav .social-network {
+    display: flex;
+    justify-content: center;
+  }
+
+  header {
+    padding: 30px 0 0;
+  }
+
+  header .column img {
+    max-width: 250px;
+    border-radius: 100%;
+  }
+  .container {
+    width: 100%;
+    max-width: 1125px;
+    margin: 0 auto;
+    padding: 30px;
+  }
+  header .column-right {
+    text-align: left;
+  }
+  main .column section {
+    border: 2px solid transparent;
+    padding: 20px;
+    position: relative;
+  }
+  main .column section span {
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    border: 2px solid transparent;
+  }
+  main .column section .high-right {
+    top: -2px;
+    left: -2px;
+    animation-name: aumentarLargura, aumentarAltura;
+    animation-duration: 1s, 1s;
+    animation-delay: 2s, 3s;
+    animation-fill-mode: forwards;
+    border-top-color: var(--gray-light);
+    border-right-color: var(--gray-light);
+  }
+
+  main .column section .down-left {
+    bottom: -2px;
+    right: -2px;
+    animation-name: aumentarLargura, aumentarAltura;
+    animation-duration: 1s, 1s;
+    animation-delay: 4s, 5s;
+    animation-fill-mode: forwards;
+    border-bottom-color: var(--gray-light);
+    border-left-color: var(--gray-light);
+  }
+  main .column {
+    padding: 0;
+  }
+  footer nav .social-network li {
+    margin: 0 14px;
+    text-align: center;
+    display: initial;
+  }
+}
+
+@media only screen and (min-width: 991px) {
+  header .column-right {
+    flex-basis: 70%;
+  }
+}
