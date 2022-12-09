@@ -1,8 +1,3 @@
-<p align="center">🔥 Compressão de Imagem com Node.js!</br>
-Uma ótima aplicaçãoque entrega o resultado que deseja!</p>
-
-<br />
-
 <h2 id="objetivo">✅ Objetivo </h2>
 
 Gerar uma imagem nova, onde podemos definir o tamanho da imagem que quisermos e diminuir o máximo possível o peso do arquivo!
