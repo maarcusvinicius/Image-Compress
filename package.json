@@ -1,0 +1,28 @@
+{
+  "name": "imagecompress",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maarcusvinicius/CV.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maarcusvinicius/CV/issues"
+  },
+  "homepage": "https://github.com/maarcusvinicius/CV#readme",
+  "dependencies": {
+    "gifsicle": "^5.2.1",
+    "pngquant-bin": "^6.0.1",
+    "sharp": "^0.31.2"
+  },
+  "devDependencies": {
+    "compress-images": "^2.0.5"
+  },
+  "description": ""
+}
